@@ -4,7 +4,9 @@ A small React + Vite demo for switching between light, dark, and system themes.
 
 ## Live preview
 
-[Open the theme toggle demo](https://akshayajeril.github.io/trialWorks/)
+<a href="https://akshayajeril.github.io/trialWorks/" target="_blank" rel="noopener noreferrer">
+  🚀 Open the Theme Toggle Demo ↗
+</a>
 
 ## Run the demo locally
 

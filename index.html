@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f5ef" />
+    <title>Theme control</title>
+    <script>
+      (() => {
+        const key = 'theme-mode';
+        let mode = 'system';
+
+        try {
+          const storedMode = localStorage.getItem(key);
+          if (storedMode === 'light' || storedMode === 'dark' || storedMode === 'system') {
+            mode = storedMode;
+          }
+        } catch {
+          // Storage can be unavailable in restricted browser contexts.
+        }
+
+        const isDark = mode === 'dark' ||
+          (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.classList.toggle('light', !isDark);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DiV6xq0x.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-H2Z8flFO.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
